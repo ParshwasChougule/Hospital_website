@@ -1,0 +1,257 @@
+/* Services Page Layout */
+.services-page-wrapper {
+    background-color: #f8fafc;
+    min-height: 100vh;
+    padding-bottom: 80px;
+}
+
+/* Header Section */
+.services-header {
+    background-color: #20708D;
+    color: white;
+    padding: 80px 20px;
+    text-align: center;
+    margin-bottom: 0;
+}
+
+.services-header h1 {
+    font-size: 3rem;
+    font-weight: 800;
+    margin: 0 0 20px;
+    color: white;
+}
+
+.services-header p {
+    font-size: 1.25rem;
+    opacity: 0.95;
+    max-width: 700px;
+    margin: 0 auto;
+    line-height: 1.6;
+    color: white;
+}
+
+/* Main Content Area */
+.services-container {
+    max-width: 1280px;
+    margin: 0 auto;
+    padding: 60px 20px;
+    display: grid;
+    grid-template-columns: 350px 1fr;
+    gap: 40px;
+    align-items: start;
+}
+
+/* Sidebar Navigation (Departments List) */
+.services-sidebar {
+    background: white;
+    border-radius: 20px;
+    padding: 20px;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05);
+    border: 1px solid #e2e8f0;
+    position: sticky;
+    top: 100px;
+}
+
+.services-sidebar h3 {
+    font-size: 1.1rem;
+    color: #64748b;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    margin: 10px 0 20px 10px;
+}
+
+.dept-nav-item {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    width: 100%;
+    padding: 15px;
+    border: none;
+    background: transparent;
+    border-radius: 12px;
+    cursor: pointer;
+    transition: all 0.2s;
+    text-align: left;
+    color: #334155;
+    font-weight: 500;
+    font-size: 1rem;
+}
+
+.dept-nav-item:hover {
+    background: #f1f5f9;
+    color: #20708D;
+}
+
+.dept-nav-item.active {
+    background: #f0f9ff;
+    color: #20708D;
+    font-weight: 700;
+    box-shadow: 0 2px 4px rgba(37, 130, 161, 0.1);
+}
+
+.dept-nav-icon {
+    font-size: 1.5rem;
+    width: 30px;
+    display: flex;
+    justify-content: center;
+}
+
+/* Detail Content */
+.service-detail-card {
+    background: white;
+    border-radius: 24px;
+    padding: 40px;
+    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+    border: 1px solid #e2e8f0;
+}
+
+.detail-header {
+    margin-bottom: 30px;
+    border-bottom: 1px solid #e2e8f0;
+    padding-bottom: 20px;
+}
+
+.detail-header h2 {
+    font-size: 2.5rem;
+    color: #0f172a;
+    margin: 0 0 10px;
+}
+
+.detail-subtitle {
+    font-size: 1.1rem;
+    color: #64748b;
+    line-height: 1.6;
+}
+
+.detail-section {
+    margin-bottom: 40px;
+}
+
+.detail-section h3 {
+    font-size: 1.5rem;
+    color: #20708D;
+    margin-bottom: 15px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.detail-section p {
+    color: #334155;
+    line-height: 1.7;
+    font-size: 1.05rem;
+}
+
+.detail-list {
+    list-style: none;
+    padding: 0;
+    display: grid;
+    gap: 12px;
+}
+
+.detail-list li {
+    position: relative;
+    padding-left: 30px;
+    color: #475569;
+    font-size: 1rem;
+}
+
+.detail-list li::before {
+    content: '•';
+    color: #20708D;
+    font-size: 1.5rem;
+    position: absolute;
+    left: 10px;
+    top: -5px;
+}
+
+.cta-box {
+    background: #f0f9ff;
+    padding: 30px;
+    border-radius: 16px;
+    text-align: center;
+    margin-top: 40px;
+}
+
+.cta-box h4 {
+    color: #0f172a;
+    font-size: 1.25rem;
+    margin: 0 0 10px;
+}
+
+.cta-box p {
+    color: #64748b;
+    margin-bottom: 20px;
+}
+
+.cta-btn {
+    background: #20708D;
+    color: white;
+    padding: 12px 30px;
+    border-radius: 8px;
+    border: none;
+    font-weight: 600;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background 0.2s;
+}
+
+.cta-btn:hover {
+    background: #1d6a85;
+}
+
+/* A-Z Section */
+.az-section {
+    background: white;
+    padding: 80px 0;
+}
+
+.az-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+    justify-content: center;
+    max-width: 1000px;
+    margin: 40px auto 0;
+}
+
+.az-item {
+    padding: 10px 20px;
+    border: 1px solid #e2e8f0;
+    border-radius: 30px;
+    color: #475569;
+    font-weight: 500;
+    transition: all 0.2s;
+    cursor: default;
+}
+
+.az-item:hover {
+    border-color: #20708D;
+    color: #20708D;
+    background: #f0f9ff;
+}
+
+/* Responsive */
+@media (max-width: 1024px) {
+    .services-container {
+        grid-template-columns: 1fr;
+    }
+
+    .services-sidebar {
+        position: static;
+        display: flex;
+        overflow-x: auto;
+        padding: 10px;
+        gap: 10px;
+    }
+
+    .dept-nav-item {
+        width: auto;
+        white-space: nowrap;
+        flex-shrink: 0;
+    }
+
+    .services-sidebar h3 {
+        display: none;
+    }
+}

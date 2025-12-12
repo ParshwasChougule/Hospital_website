@@ -1,0 +1,249 @@
+/* About Page Layout */
+.about-page-wrapper {
+    background-color: #f8fafc;
+    min-height: 100vh;
+    padding-bottom: 80px;
+}
+
+/* Header Section */
+.about-header {
+    background-color: #20708D;
+    color: white;
+    padding: 80px 20px;
+    text-align: center;
+    margin-bottom: 0;
+    /* Flush with next section if needed, or add margin */
+}
+
+.about-header h1 {
+    font-size: 3rem;
+    font-weight: 800;
+    margin: 0 0 20px;
+    color: white;
+}
+
+.about-header p {
+    font-size: 1.25rem;
+    opacity: 0.95;
+    max-width: 700px;
+    margin: 0 auto;
+    line-height: 1.6;
+    color: white;
+}
+
+/* Mission & Vision Section */
+.mission-section {
+    padding: 80px 0;
+    background: white;
+}
+
+.mission-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 40px;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.mission-card {
+    background: #f0f9ff;
+    padding: 40px;
+    border-radius: 20px;
+    text-align: center;
+    transition: transform 0.3s ease;
+}
+
+.mission-card:hover {
+    transform: translateY(-5px);
+}
+
+.mission-icon {
+    font-size: 3rem;
+    color: #20708D;
+    margin-bottom: 20px;
+    display: inline-block;
+}
+
+.mission-card h3 {
+    color: #0f172a;
+    font-size: 1.5rem;
+    margin-bottom: 15px;
+}
+
+.mission-card p {
+    color: #475569;
+    line-height: 1.6;
+}
+
+/* Leadership Section */
+.leadership-section {
+    padding: 80px 0;
+    background: #f8fafc;
+}
+
+.leadership-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 30px;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.leader-card {
+    background: white;
+    padding: 30px;
+    border-radius: 16px;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05);
+    border: 1px solid #e2e8f0;
+    display: flex;
+    align-items: flex-start;
+    gap: 20px;
+}
+
+.leader-icon {
+    background: #e0f2fe;
+    color: #20708D;
+    width: 50px;
+    height: 50px;
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.5rem;
+    flex-shrink: 0;
+}
+
+.leader-info h4 {
+    margin: 0 0 5px;
+    font-size: 1.1rem;
+    color: #0f172a;
+}
+
+.leader-info p {
+    margin: 0;
+    font-size: 0.95rem;
+    color: #64748b;
+}
+
+/* Stats / Accreditations Strip */
+.stats-strip {
+    background: #0f172a;
+    color: white;
+    padding: 60px 0;
+}
+
+.stats-grid {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    gap: 40px;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+    text-align: center;
+}
+
+.stat-item h3 {
+    font-size: 2.5rem;
+    color: #20708D;
+    /* Using the brand color for pop */
+    margin: 0 0 10px;
+}
+
+.stat-item p {
+    font-size: 1.1rem;
+    opacity: 0.8;
+    margin: 0;
+}
+
+/* Values Section */
+.values-section {
+    padding: 80px 0;
+    background: white;
+}
+
+.values-list {
+    max-width: 800px;
+    margin: 0 auto;
+    display: grid;
+    gap: 20px;
+    padding: 0 20px;
+}
+
+.value-item {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    padding: 20px;
+    background: #fff;
+    border: 1px solid #e2e8f0;
+    border-radius: 12px;
+}
+
+.value-check {
+    color: #16a34a;
+    /* Green for checkmark */
+    font-size: 1.5rem;
+    flex-shrink: 0;
+}
+
+.value-text {
+    font-size: 1.1rem;
+    color: #334155;
+    font-weight: 500;
+}
+
+/* Community Section */
+.community-section {
+    padding: 80px 0;
+    background: linear-gradient(to bottom, #f0f9ff, #ffffff);
+    text-align: center;
+}
+
+.community-content {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.community-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+    margin-top: 40px;
+}
+
+.community-box {
+    background: white;
+    padding: 30px;
+    border-radius: 16px;
+    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+}
+
+.community-box h4 {
+    color: #20708D;
+    margin-bottom: 10px;
+    font-size: 1.2rem;
+}
+
+.community-box p {
+    color: #64748b;
+    font-size: 0.95rem;
+}
+
+@media (max-width: 768px) {
+    .about-header h1 {
+        font-size: 2rem;
+    }
+
+    .community-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .stats-grid {
+        flex-direction: column;
+        gap: 30px;
+    }
+}

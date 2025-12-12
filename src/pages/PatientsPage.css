@@ -1,0 +1,212 @@
+/* Patients Page Layout */
+.patients-page-wrapper {
+    background-color: #f8fafc;
+    min-height: 100vh;
+    padding-bottom: 80px;
+}
+
+/* Header Section */
+.patients-header {
+    background-color: #20708D;
+    color: white;
+    padding: 80px 20px;
+    text-align: center;
+    margin-bottom: 0;
+}
+
+.patients-header h1 {
+    font-size: 3rem;
+    font-weight: 800;
+    margin: 0 0 20px;
+    color: white;
+}
+
+.patients-header p {
+    font-size: 1.25rem;
+    opacity: 0.95;
+    max-width: 700px;
+    margin: 0 auto;
+    line-height: 1.6;
+    color: white;
+}
+
+/* Info Cards Grid */
+.info-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+    max-width: 1200px;
+    margin: 60px auto;
+    padding: 0 20px;
+}
+
+.info-card {
+    background: white;
+    border-radius: 20px;
+    padding: 30px;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05);
+    border: 1px solid #e2e8f0;
+    transition: transform 0.3s ease;
+}
+
+.info-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+    border-color: #20708D;
+}
+
+.card-icon {
+    font-size: 2.5rem;
+    color: #20708D;
+    margin-bottom: 20px;
+    background: #f0f9ff;
+    width: 60px;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 12px;
+}
+
+.info-card h3 {
+    font-size: 1.5rem;
+    color: #0f172a;
+    margin-bottom: 15px;
+}
+
+.info-card p {
+    color: #64748b;
+    margin-bottom: 20px;
+    line-height: 1.6;
+}
+
+.info-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.info-list li {
+    position: relative;
+    padding-left: 25px;
+    margin-bottom: 10px;
+    color: #475569;
+    font-size: 0.95rem;
+}
+
+.info-list li::before {
+    content: '•';
+    color: #20708D;
+    font-size: 1.5rem;
+    position: absolute;
+    left: 5px;
+    top: -8px;
+}
+
+/* Visiting Hours Section */
+.visiting-section {
+    background: white;
+    padding: 80px 0;
+}
+
+.visiting-container {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 0 20px;
+    display: flex;
+    gap: 40px;
+    align-items: center;
+}
+
+.visiting-content {
+    flex: 1;
+}
+
+.visiting-hours-box {
+    background: #f0f9ff;
+    padding: 30px;
+    border-radius: 16px;
+    border-left: 5px solid #20708D;
+    margin-top: 20px;
+}
+
+.visiting-time {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: #20708D;
+    display: block;
+    margin-bottom: 5px;
+}
+
+/* Amenities Grid */
+.amenities-section {
+    padding: 80px 0;
+    background: #f8fafc;
+}
+
+.amenities-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 20px;
+    max-width: 1000px;
+    margin: 40px auto 0;
+    padding: 0 20px;
+}
+
+.amenity-item {
+    background: white;
+    padding: 20px;
+    border-radius: 12px;
+    text-align: center;
+    border: 1px solid #e2e8f0;
+}
+
+.amenity-icon {
+    font-size: 2rem;
+    color: #20708D;
+    margin-bottom: 10px;
+    display: block;
+}
+
+.amenity-text {
+    font-weight: 600;
+    color: #334155;
+}
+
+/* Portal Section */
+.portal-section {
+    background: #0f172a;
+    color: white;
+    padding: 80px 0;
+    text-align: center;
+}
+
+.portal-content {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.portal-btn {
+    background: #20708D;
+    color: white;
+    padding: 15px 40px;
+    border-radius: 30px;
+    font-size: 1.1rem;
+    font-weight: 700;
+    border: none;
+    cursor: pointer;
+    margin-top: 30px;
+    transition: transform 0.2s;
+}
+
+.portal-btn:hover {
+    transform: scale(1.05);
+    background: #1d6a85;
+}
+
+@media (max-width: 768px) {
+    .visiting-container {
+        flex-direction: column;
+    }
+}
