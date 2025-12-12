@@ -36,7 +36,14 @@ const Doctors = () => {
                 <button
                   type="button"
                   className="btn btn-primary"
-                  onClick={() => navigate('/appointments')}
+                  onClick={() =>
+                    navigate('/appointments', {
+                      state: {
+                        doctorName: doctor.name,
+                        specialty: doctor.specialty,
+                      },
+                    })
+                  }
                 >
                   Book Appointment
                 </button>

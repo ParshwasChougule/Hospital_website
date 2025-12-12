@@ -1,7 +1,11 @@
 import React, { useState } from 'react';
+import { useLocation } from 'react-router-dom';
 import '../pages/AppointmentPage.css';
 
 const AppointmentForm = () => {
+  const location = useLocation();
+  const { doctorName, specialty } = location.state || {};
+
   const [formData, setFormData] = useState({
     firstName: '',
     lastName: '',
@@ -9,7 +13,8 @@ const AppointmentForm = () => {
     email: '',
     dob: '',
     gender: 'Select Gender',
-    department: 'Select Department',
+    department: specialty || 'Select Department',
+    doctor: doctorName || '',
     date: '',
     time: 'Morning (9 AM - 12 PM)',
     reason: ''
@@ -41,6 +46,7 @@ const AppointmentForm = () => {
           "Date of Birth": formData.dob,
           "Gender": formData.gender,
           "--- APPOINTMENT DETAILS ---": "",
+          "Preferred Doctor": formData.doctor,
           "Department": formData.department,
           "Preferred Date": formData.date,
           "Preferred Time": formData.time,
@@ -61,6 +67,7 @@ const AppointmentForm = () => {
           dob: '',
           gender: 'Select Gender',
           department: 'Select Department',
+          doctor: '',
           date: '',
           time: 'Morning (9 AM - 12 PM)',
           reason: ''
@@ -159,6 +166,20 @@ const AppointmentForm = () => {
       </div>
 
       <h2 className="apt-form-title text-center" style={{ marginTop: '20px' }}>Appointment Details</h2>
+
+      <div className="apt-grid">
+        <div className="apt-full-width">
+          <label className="apt-label">Preferred Doctor</label>
+          <input
+            type="text"
+            name="doctor"
+            className="apt-input"
+            placeholder="Dr. Name (Optional)"
+            value={formData.doctor}
+            onChange={handleChange}
+          />
+        </div>
+      </div>
 
       <div className="apt-grid">
         <div className="apt-full-width">

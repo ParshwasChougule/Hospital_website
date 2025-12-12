@@ -131,10 +131,15 @@ const DoctorsPage = () => {
                     className="doc-btn doc-btn-primary"
                     onClick={(e) => {
                       e.stopPropagation();
-                      navigate('/appointments');
+                      navigate('/appointments', {
+                        state: {
+                          doctorName: doctor.name,
+                          specialty: doctor.specialty,
+                        },
+                      });
                     }}
                   >
-                    Book Now
+                    Book Appoinment
                   </button>
                 </div>
               </div>
@@ -198,7 +203,14 @@ const DoctorsPage = () => {
 
                 <button
                   className="profile-book-btn"
-                  onClick={() => navigate('/appointments')}
+                  onClick={() =>
+                    navigate('/appointments', {
+                      state: {
+                        doctorName: selectedDoctor.name,
+                        specialty: selectedDoctor.specialty,
+                      },
+                    })
+                  }
                 >
                   Book Appointment
                 </button>
